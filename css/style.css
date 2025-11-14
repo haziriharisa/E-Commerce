@@ -15,7 +15,7 @@ header{
 
 .logo {
     cursor: pointer;
-    width: 150px;
+    width: 140px;
     
 }
 
@@ -33,6 +33,7 @@ header{
     color: black;
     transition: all 0.3s ease 0s;
     text-decoration: none;
+    font-size: 17px;
 }
 
 .nav_links li a:hover{
@@ -42,7 +43,7 @@ header{
 button{
     color: white;
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: rgb(117, 18, 255,1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -50,5 +51,54 @@ button{
 }
 
 button:hover{
-    background-color: rgba(0,136,169,0.8);
+    background-color: rgba(117,18,255,0.8);
+}
+
+.hero{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    min-height: 600px;
+    max-height: 800px;
+}
+
+.hero h1{
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 16px 0;
+    background: linear-gradient(90deg, #433798 20%, #1a1423 60%);
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p{
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.buttons{
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    font-weight: bold;
+}
+.btn{
+    padding: 12px 50px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(117, 18, 255,1);
+}
+
+.btnoutlined{
+    padding: 12px 50px;
+    color:  rgb(117, 18, 255,1);
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid;
+}
+
+.heroleft{
+    width: 55%;
+    margin-left: 80px;
 }
