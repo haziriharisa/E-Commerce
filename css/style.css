@@ -10,7 +10,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 10%;
 }
 
 .logo {
@@ -37,7 +37,7 @@ header{
 }
 
 .nav_links li a:hover{
-    color: #0088a9
+    color: rgb(117, 18, 255,1)
 }
 
 button{
@@ -51,7 +51,7 @@ button{
 }
 
 button:hover{
-    background-color: rgba(117,18,255,0.8);
+    background-color: rgb(98, 0, 236);
 }
 
 .hero{
@@ -60,6 +60,8 @@ button:hover{
     align-items: center;
     min-height: 600px;
     max-height: 800px;
+    background-color: rgba(192, 192, 192, 0.2);
+    margin-bottom: 50px;
 }
 
 .hero h1{
@@ -88,6 +90,11 @@ button:hover{
     color: white;
     text-decoration: none;
     background-color: rgb(117, 18, 255,1);
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover{
+    background-color: rgb(99, 0, 237);
 }
 
 .btnoutlined{
@@ -95,7 +102,13 @@ button:hover{
     color:  rgb(117, 18, 255,1);
     text-decoration: none;
     background-color: white;
-    border: 2px solid;
+    transition: all 0.3s ease 0s;
+    border: 2px solid  rgb(117, 18, 255,1);
+}
+
+.btnoutlined:hover{
+    background-color: rgb(117, 18, 255,1);
+    color: white;
 }
 
 .heroleft{
