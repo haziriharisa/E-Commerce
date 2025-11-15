@@ -115,3 +115,25 @@ button:hover{
     width: 55%;
     margin-left: 80px;
 }
+
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 100px;
+    gap: 60px;
+}
+
+.item img{
+    width: 120px;
+    background-color: rgba(192, 192, 192, 0.2);
+    border-radius: 50%;
+}
+
+.item h4{
+    text-align: center;
+}
+
+.item p{
+    text-align: center;
+}
