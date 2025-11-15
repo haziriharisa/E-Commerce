@@ -65,7 +65,7 @@ button:hover{
 }
 
 .hero h1{
-    font-size: 60px;
+    font-size: 100px;
     font-weight: 800;
     letter-spacing: -1px;
     margin: 16px 0;
@@ -75,7 +75,7 @@ button:hover{
 }
 
 .hero p{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 160%;
 }
 
@@ -86,11 +86,13 @@ button:hover{
     font-weight: bold;
 }
 .btn{
-    padding: 12px 50px;
+    padding: 30px 70px;
+    font-size:xx-large;
     color: white;
     text-decoration: none;
     background-color: rgb(117, 18, 255,1);
     transition: all 0.3s ease 0s;
+    border-radius: 20px;
 }
 
 .btn:hover{
@@ -98,12 +100,14 @@ button:hover{
 }
 
 .btnoutlined{
-    padding: 12px 50px;
+    padding: 30px 70px;
+    font-size:xx-large;
     color:  rgb(117, 18, 255,1);
     text-decoration: none;
     background-color: white;
     transition: all 0.3s ease 0s;
     border: 2px solid  rgb(117, 18, 255,1);
+    border-radius: 20px;
 }
 
 .btnoutlined:hover{
@@ -113,8 +117,8 @@ button:hover{
 
 .heroright img{
     width: 700px;
-    margin-top: 100px;
-    margin-right: 160px;
+    margin-top: 104px;
+    margin-right: 10px;
 }
 
 .heroleft{
