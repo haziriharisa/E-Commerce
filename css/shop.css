@@ -52,3 +52,59 @@ button{
 button:hover{
     background-color: rgb(98, 0, 236);
 }
+
+ .shop-section {
+            width: 90%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 30%;
+            border-radius: 10px;
+        }
+
+            .product h3 {
+            margin: 10px 0;
+        }
+
+        .product button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product1 {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .product1 img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+            .product1 h3 {
+            margin: 10px 0;
+        }
+
+        .product1 button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
