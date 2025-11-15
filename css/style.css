@@ -111,15 +111,32 @@ button:hover{
     color: white;
 }
 
+.heroright{
+    width: 50%;
+}
+
+.bg_color{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    right: 0;
+    bottom: 50px;
+    margin-right: 200px;
+    z-index: -1;
+    border: 50%;
+    filter: blur(80px);
+}
+
 .heroright img{
     width: 700px;
-    margin-top: 100px;
+    margin-top: 104px;
     margin-right: 160px;
 }
 
 .heroleft{
-    width: 55%;
-    margin-left: 80px;
+    width: 50%;
+    margin-left: 10%;
 }
 
 .products{
