@@ -60,7 +60,7 @@ button:hover{
     align-items: center;
     min-height: 600px;
     max-height: 800px;
-    background-color: rgba(192, 192, 192, 0.2);
+    background-color: rgba(192, 192, 192, 0.8);
     margin-bottom: 50px;
 }
 
@@ -111,6 +111,12 @@ button:hover{
     color: white;
 }
 
+.heroright img{
+    width: 700px;
+    margin-top: 100px;
+    margin-right: 160px;
+}
+
 .heroleft{
     width: 55%;
     margin-left: 80px;
@@ -126,7 +132,7 @@ button:hover{
 
 .item img{
     width: 120px;
-    background-color: rgba(192, 192, 192, 0.2);
+    background-color: rgba(192, 192, 192, 0.8);
     border-radius: 50%;
 }
 
