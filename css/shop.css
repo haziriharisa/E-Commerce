@@ -53,8 +53,18 @@ button:hover{
     background-color: rgb(98, 0, 236);
 }
 
+h1{
+    border-bottom: 2px solid black;
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
  .shop-section {
-            width: 90%;
+            width: 50%;
             margin: 30px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,26 +95,4 @@ button:hover{
             cursor: pointer;
         }
 
-        .product1 {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .product1 img {
-            width: 50%;
-            border-radius: 10px;
-        }
-
-            .product1 h3 {
-            margin: 10px 0;
-        }
-
-        .product1 button {
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+       
