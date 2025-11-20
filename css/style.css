@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+
 header{
     display: flex;
     justify-content: space-between;
@@ -117,6 +118,8 @@ header{
 
 .heroright{
     width: 50%;
+    margin-top: 100px;
+    object-fit: contain;
 }
 
 .bg_color{
@@ -125,7 +128,7 @@ header{
     height: 500px;
     background-color:rgba(117, 18, 255, 0.438) ;
     right: 0;
-    bottom: 50px;
+    bottom: 0px;
     margin-right: 200px;
     z-index: -1;
     border: 50%;
@@ -133,9 +136,8 @@ header{
 }
 
 .heroright img{
-    width: 700px;
-    margin-top: 104px;
-    margin-right: 160px;
+    width: 400px;
+    margin-left: 100px;
 }
 
 .heroleft{
@@ -162,7 +164,13 @@ header{
     background-color: white;
     width: 30%;
     height: 80%;
+    transition: all 0.3s ease;
+    border-radius: 10px;
 
+}
+
+.banner-left:hover{
+    box-shadow: 5px 5px 20px rgba(62, 62, 62, 0.1);
 }
 
 .banner-left img{
@@ -174,9 +182,16 @@ header{
     background-color: white;
     width: 30%;
     height: 80%;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.banner-middle:hover{
+    box-shadow: 5px 5px 20px rgba(62, 62, 62, 0.1);
 }
 
 .banner-middle img{
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -186,6 +201,12 @@ header{
     background-color: white;
     width: 30%;
     height: 80%;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.banner-right:hover{
+    box-shadow: 5px 5px 20px rgba(62, 62, 62, 0.1);
 }
 
 .banner-right img{
@@ -194,27 +215,6 @@ header{
     object-fit: contain;
 }
 
-.products{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px 100px;
-    gap: 60px;
-}
-
-.item img{
-    width: 120px;
-    background-color: rgba(192, 192, 192, 0.8);
-    border-radius: 50%;
-}
-
-.item h4{
-    text-align: center;
-}
-
-.item p{
-    text-align: center;
-}
 
 #latest{
     text-align: center;
