@@ -54,6 +54,32 @@ button:hover{
     background-color: rgb(98, 0, 236);
 }
 
+.hero-section{
+    height: 1000px;
+    object-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://i.pinimg.com/1200x/55/70/79/557079995274ded05d5d4a7750714bf8.jpg);
+}
+
+.story-section{
+    margin: 10px 16%;
+    padding: 20px 50px;
+    height: 300px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.story-section h2{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.story-section p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 .container{
     background-color: red;
     margin: auto;
