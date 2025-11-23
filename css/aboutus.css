@@ -55,14 +55,21 @@ button:hover{
 }
 
 .hero-section{
-    height: 1000px;
-    object-position: center;
-    background-repeat: no-repeat;
-    background-image: url(https://i.pinimg.com/1200x/55/70/79/557079995274ded05d5d4a7750714bf8.jpg);
+    height: 70vh;
+}
+
+.hero-section h1{
+    text-align: center;
+}
+
+.hero-section img{
+    z-index: -1;
+    filter: blur(2px);
+    margin-left: 13%;
 }
 
 .story-section{
-    margin: 10px 16%;
+    margin: 40px 16%;
     padding: 20px 50px;
     height: 300px;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
@@ -72,12 +79,52 @@ button:hover{
 .story-section h2{
     margin-bottom: 15px;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .story-section p{
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5;
+}
+
+.values{
+    margin: 40px 16%;
+    padding: 20px 50px;
+    height: 350px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.values h2{
+    text-align: center;
+    font-size: 36px;
+}
+.values-grid{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pillar-card {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+}
+
+.pillar-card .icon {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.pillar-card h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #007AFF; 
+    margin-bottom: 10px;
 }
 
 .container{
