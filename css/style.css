@@ -41,19 +41,16 @@ header{
     color: rgb(117, 18, 255,1)
 }
 
-.loginbtn{
-    color: white;
-    padding: 10px 30px;
-    font-size: 15px;
-    background-color: rgb(117, 18, 255,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+#account{
+    color: rgb(117, 18, 255,1);
+    margin: 10px 20px;
+    font-size: 25px;
 }
 
-.loginbtn:hover{
-    background-color: rgb(98, 0, 236);
+#cart{
+    color: rgb(117, 18, 255,1);
+    margin-top: 10px;
+    font-size: 25px;
 }
 
 .hero{
@@ -248,11 +245,10 @@ header{
 }
 
 .subscribe{
-    background-color: #433798;
+    background-color: rgb(122, 28, 255);
     align-content: center;
     justify-items: center;
-    height: 35vh;
-    margin-bottom: 30px;
+    height: 40vh;
 }
 
 .email-section{
@@ -297,7 +293,7 @@ footer{
 }
 
 .footer-col h4{
-    font-size: 18px;
+    font-size: 19px;
     color: #ffffff;
     text-transform: capitalize;
     margin-bottom: 35px;
@@ -310,7 +306,7 @@ footer{
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: #e91e63;
+    background-color: rgb(117, 18, 255,1);
     height: 2px;
     box-sizing: border-box;
     width: 50px;

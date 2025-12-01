@@ -39,33 +39,28 @@ header{
     color: rgb(117, 18, 255,1)
 }
 
-button{
-   color: white;
-    padding: 10px 30px;
-    font-size: 15px;
-    background-color: rgb(117, 18, 255,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+#account{
+    color: rgb(117, 18, 255,1);
+    margin: 10px 20px;
+    font-size: 25px;
 }
 
-button:hover{
-    background-color: rgb(98, 0, 236);
+#cart{
+    color: rgb(117, 18, 255,1);
+    margin: 10px 0px;
+    font-size: 25px;
 }
 
 .hero-section{
-    height: 70vh;
+    height: 80vh;
+    background-image: url('https://i.pinimg.com/736x/19/a1/fc/19a1fcb4c082b84e2cb5a08a59e7832e.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-position: 1px;
 }
 
 .hero-section h1{
     text-align: center;
-}
-
-.hero-section img{
-    z-index: -1;
-    filter: blur(2px);
-    margin-left: 13%;
 }
 
 .story-section{
@@ -77,6 +72,7 @@ button:hover{
 }
 
 .story-section h2{
+    text-align: center;
     margin-bottom: 15px;
     margin-top: 10px;
     font-size: 36px;
