@@ -76,37 +76,168 @@ h2{
     font-size: 50px;
 }
 
- .shop-section {
-            width: 50%;
-            margin: 30px auto;
+.shop-page-container {
+    display: flex;
+    max-width: 1500px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.shop-sidebar {
+    width: 250px;
+    padding-right: 30px;
+    border-right: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.shop-sidebar h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.filter-group h4 {
+    margin: 0 0 10px 0;
+    color: #555;
+    font-size: 20px;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slider{
+    width: 180px;
+    accent-color: rgb(117, 18, 255,1);
+}
+
+.filter-group ul li a {
+    text-decoration: none;
+    color: rgb(117, 18, 255,1);
+    font-size: 18px;
+    display: block;
+    padding: 3px 0;
+}
+
+.product-listing {
+    padding-left: 30px;
+}
+
+.listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.listing-header h2{
+    font-size: 40px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.sort-dropdown {
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px;
         }
 
-        .product {
+        .product-card {
             border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 10px;
+            border-radius: 8px;
+            padding: 20px;
             text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .product img {
-            width: 30%;
-            border-radius: 10px;
+        .product-image {
+            width: 50%;
+            margin: 20px 0;
+            border-radius: 4px;
+            object-fit: cover;
         }
 
-            .product h3 {
-            margin: 10px 0;
+        .product-title {
+            font-size: 1.5em;
+            margin: 0 0 5px 0;
+            color: #333;
         }
 
-        .product button {
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+        .product-price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #dc3545; 
+            margin-bottom: 5px;
         }
+
+        .product-category {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+.add-to-cart {
+    background-color: rgb(117, 18, 255,1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.add-to-cart:hover {
+    background-color: rgb(99, 0, 237);
+}
+
+.pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pagination a {
+    color: rgb(117, 18, 255,1);
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.pagination a.active {
+    background-color:  rgb(117, 18, 255,1);
+    color: white;
+    border: 1px solid #007bff;
+    font-weight: bold;
+}
+        
+.pagination a:hover:not(.active) {
+    background-color: #f0f0f0;
+}
 
 .container{
     background-color: red;
@@ -190,4 +321,4 @@ footer{
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
-}       
+}
