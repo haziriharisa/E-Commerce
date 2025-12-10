@@ -86,6 +86,7 @@ h2{
 .shop-sidebar {
     width: 250px;
     padding-right: 30px;
+    padding-top: 10px;
     border-right: 1px solid #eee;
     margin-top: 20px;
 }
@@ -152,51 +153,50 @@ h2{
 }
 
 .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+}
 
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            background-color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s;
-        }
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
         
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .product-image {
-            width: 50%;
-            margin: 20px 0;
-            border-radius: 4px;
-            object-fit: cover;
-        }
+.product-image {
+    width: 50%;
+    margin: 20px 0;
+    border-radius: 4px;
+    object-fit: cover;
+}
 
-        .product-title {
-            font-size: 1.5em;
-            margin: 0 0 5px 0;
-            color: #333;
-        }
+.product-title {
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+    color: #333;
+}
 
-        .product-price {
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #dc3545; 
-            margin-bottom: 5px;
-        }
+.product-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #dc3545; 
+    margin-bottom: 5px;
+}
 
-        .product-category {
-            font-size: 0.9em;
-            color: #888;
-            margin-bottom: 15px;
-        }
+.product-category {
+    color: #888;
+    margin-bottom: 15px;
+}
 
 .add-to-cart {
     background-color: rgb(117, 18, 255,1);
