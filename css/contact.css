@@ -167,7 +167,6 @@ textarea::-webkit-scrollbar{
 }
 
 .container{
-    background-color: red;
     margin: auto;
 }
 
@@ -195,7 +194,6 @@ footer{
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 35px;
     font-weight: 500;
     position: relative;
     display: inline;
@@ -248,4 +246,103 @@ footer{
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
-}       
+}     
+   
+
+@media screen and (max-width: 864px) {
+    
+    header {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .nav_links {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .nav_links li {
+        display: block; 
+        padding: 10px 0;
+    }
+      #account{
+        margin-top: 18px;
+    }
+
+    .icons{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-left: 20px;
+    }
+
+    .form-container {
+        padding: 40px 20px;
+    }
+
+    .form-container form {
+        width: 100%;       
+        max-width: 500px;  
+        height: auto;     
+        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container h1 {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .form-container input, 
+    .form-container form #lastName, 
+    .form-container form #mobile {
+        width: 95%;       
+        margin-left: 0;
+        margin-right: auto;    
+        margin-bottom: 15px;
+    }
+
+    .form-container form textarea {
+        min-width: 95%;   
+        max-width: 95%;
+        margin-right: auto;    
+
+    }
+
+    #button{
+        margin-left: auto;
+    }
+
+    .form-container form h4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        flex-wrap: wrap;   
+    }
+
+    .footer-col {
+        width: 100%;       
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-container h1 {
+        font-size: 20px;
+    }
+    
+    footer {
+        padding: 40px 20px;
+    }
+}

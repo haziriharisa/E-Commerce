@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -23,7 +25,10 @@
     display: flex;
     flex-direction: column;
     width: 480px;
-    padding: 60px 20px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px 20px;
 }
 
 .login-box h1{
@@ -84,6 +89,12 @@
     background-color: blueviolet;
     color: white;
     font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.login_btn:hover{
+    cursor: pointer;
+    background-color: rgb(125, 26, 218);
 }
 
 .signup{
@@ -107,8 +118,59 @@
 }
 
 .check input{
+    cursor: pointer;
     margin-right: 5px;
     width: 18px;
     height: 18px;
     margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .login-container {
+        height: 100vh;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .login-box {
+        width: 100%;
+        max-width: 400px; 
+        padding: 30px 15px;
+    }
+
+    .login-box h1 {
+        font-size: 32px;
+    }
+
+    .detail {
+        font-size: 18px;
+    }
+
+    .name {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .name input {
+        width: auto;
+        max-width: auto;
+    }
+
+    .login-box input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .login-box h1 {
+        font-size: 28px;
+    }
+
+    .login-box label, .signup, .login_btn {
+        font-size: 18px;
+    }
+    
+    .check label {
+        font-size: 14px;
+    }
 }

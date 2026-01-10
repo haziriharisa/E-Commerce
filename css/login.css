@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -75,6 +77,12 @@
     background-color: blueviolet;
     color: white;
     font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.login_btn:hover{
+    cursor: pointer;
+    background-color: rgb(125, 26, 218);
 }
 
 .signup{
@@ -112,8 +120,109 @@
 }
 
 .check input{
+    cursor: pointer;
     margin-right: 5px;
     width: 18px;
     height: 18px;
     margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .login-container {
+        height: 100vh;
+        padding: 20px; 
+    }
+
+    .login-box {
+        width: 100%;       
+        max-width: 350px;  
+        padding: 40px 20px; 
+    }
+
+    .login-box h1 {
+        font-size: 30px;   
+    }
+
+    .detail {
+        font-size: 18px;   
+    }
+
+    .login-box label {
+        font-size: 18px;
+    }
+
+    .login-box input, 
+    .login-box input::placeholder {
+        font-size: 16px;   
+    }
+
+    .remember {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .remember label{
+        font-size: 16px;
+    }
+    .remember a {
+        font-size: 16px;
+    }
+
+    .signup {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .login-container {
+        height: 100vh;
+    }
+
+    .login-box {
+        padding: 30px 15px; 
+        border-radius: 12px; 
+    }
+
+    .login-box h1 {
+        font-size: 26px; 
+        margin-bottom: 10px;
+    }
+
+    .detail {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .login-box label {
+        font-size: 16px;
+    }
+
+    .login-box input {
+        padding: 10px 5px; 
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .login_btn {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .remember {
+        gap: 10px;
+    }
+
+    .check input{
+        margin-top: 14px;
+        width: 15px;
+        height: 15px;
+    }
+    .remember a, .check label {
+        font-size: 14px;
+    }
+
+    .signup {
+        font-size: 15px;
+        margin-top: 20px;
+    }
 }

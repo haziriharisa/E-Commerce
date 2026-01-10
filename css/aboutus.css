@@ -93,7 +93,7 @@ header{
 .values{
     margin: 40px 16%;
     padding: 20px 50px;
-    height: 350px;
+    height: auto;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
     border-radius: 10px;
 }
@@ -189,7 +189,6 @@ header{
 }
 
 .container{
-    background-color: red;
     margin: auto;
 }
 
@@ -217,7 +216,6 @@ footer{
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 35px;
     font-weight: 500;
     position: relative;
     display: inline;
@@ -270,4 +268,100 @@ footer{
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #ffffff;
-}       
+}     
+
+@media screen and (max-width: 1024px){
+    .hero-section h1{
+        font-size: 65px;
+    }
+
+    .story-section{
+        margin: 0 5%;
+        height: auto;
+        padding: 20px 40px;
+    }
+
+    .values, .team-section{
+        height: auto;
+        padding: 20px 40px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media screen and (max-width: 864px) {
+    
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav_links {
+        margin-top: 20px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav_links li {
+        display: block; 
+        padding: 10px 0;
+    }
+
+
+    .icons{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-left: 20px;
+    }
+    .hero-section h1 {
+        font-size: 35px; 
+        width: 90%;
+    }
+
+    .story-section{
+        margin: 0 10%;
+        height: auto;
+        padding: 20px 40px;
+    }
+
+    .values, .team-section{
+        height: auto;
+        padding: 20px 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .values-grid, .team-container, .row {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .pillar-card, .team-member-card, .footer-col {
+        width: 100%;
+        max-width: none;
+    }
+
+    .team-member-card {
+        width: 90%;
+        height: auto;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    
+    .story-section h2, .values h2, .team-section h2 {
+        font-size: 28px;
+    }
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -76,5 +78,54 @@
     background-color: blueviolet;
     color: white;
     font-weight: bold;
+    transition: all 0.2s ease;
 }
 
+.login_btn:hover{
+    cursor: pointer;
+    background-color: rgb(125, 26, 218);
+}
+
+@media screen and (max-width: 600px) {
+    .login-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .login-box {
+        width: 100%;       
+        max-width: 400px;  
+        padding: 40px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 32px;   
+    }
+
+    .detail {
+        font-size: 18px;
+    }
+
+    .login-box label {
+        font-size: 18px;
+    }
+
+    .login-box input {
+        font-size: 16px;  
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .login-box h1 {
+        font-size: 26px;
+    }
+
+    .login-box {
+        padding: 30px 15px;
+    }
+    
+    .login_btn {
+        font-size: 18px;
+    }
+}
