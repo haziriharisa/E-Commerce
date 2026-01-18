@@ -8,9 +8,16 @@
     <title>Solora</title>
 </head>
 <body>
-    <header>
-        <a href=""><img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo"></a>
-        <nav>
+    <header id="header">
+        <div style="display: flex; justify-content: center; gap: 10px; align-items: center; margin-right: 20px;">
+            <button class="menu-toggle" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+             <a href="index.html">
+                <img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
+            </a>
+        </div>
+        <nav id="navbar">
             <ul class="nav_links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -18,12 +25,12 @@
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="icons">
+
+        <div class="icons" id="headerIcons">
             <a href="cart.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.html"><i id="account" class="fa-solid fa-user"></i></a>
         </div>
     </header>
-
     <div class="hero">
         <div class="heroleft">
             <h1>Think tech. Think <b>SOLORA.</b></h1>
@@ -189,5 +196,7 @@
             </div>
         </div>
     </footer>
+    <script src="nav.js"></script>
+
 </body>
 </html>

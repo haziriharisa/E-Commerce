@@ -81,6 +81,15 @@
     width: 200px;
 }
 
+.role{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.role input{
+    width: 200px;
+}
+
 .login_btn{
     padding: 12px;
     font-size: 20px;

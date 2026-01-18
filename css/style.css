@@ -6,7 +6,6 @@
     padding: 0;
 }
 
-
 header{
     display: flex;
     justify-content: space-between;
@@ -17,11 +16,20 @@ header{
 .logo {
     cursor: pointer;
     width: 140px;
-    
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
 }
 
 .nav_links{
     list-style: none;
+    margin-right: 30px;
 }
 
 .nav_links li{
@@ -83,11 +91,18 @@ header{
     margin-top: 32px;
     font-weight: bold;
 }
-.btn{
-    padding: 20px 70px;
+
+.buttons a{
+    width: 200px;
     font-size: 24px;
+    padding: 20px 30px;
+
+}
+
+.btn{
     color: white;
     text-decoration: none;
+    text-align: center;
     background-color: rgb(117, 18, 255,1);
     transition: all 0.3s ease 0s;
     border-radius: 20px;
@@ -98,10 +113,9 @@ header{
 }
 
 .btnoutlined{
-    padding: 20px 70px;
-    font-size: 24px;
     color:  rgb(117, 18, 255,1);
     text-decoration: none;
+    text-align: center;
     background-color: white;
     transition: all 0.3s ease 0s;
     border: 2px solid  rgb(117, 18, 255,1);
@@ -510,10 +524,15 @@ footer{
         padding: 20px 5%;
     }
 
-    .heroleft h1{
-        font-size: 60px;
+    .hero{
+        max-height: 500px;
     }
-    
+    .heroleft h1{
+        font-size: 52px;
+    }
+    .heroleft p{
+        font-size: 22px;
+    }
 
     .buttons a{
         font-size: 22px;
@@ -562,12 +581,65 @@ footer{
         width: 40%;
     }
 }
+@media screen and (max-width: 925px){
 
-@media screen and (max-width: 768px) {
+   .buttons a{
+        width: 140px;
+        font-size: 20px;
+        padding: 14px 30px;
+    }
+}
+
+@media screen and (max-width: 839px) {
+
     header {
         flex-direction: column;
     }
+
+    .hero{
+        height: 500px;
+    }
+
+    .heroright{
+        height: 500px;
+    }
+
+    .heroright img{
+        padding-top: 0px;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    nav{
+        display: none; 
+    }
+
+    #headerIcons {
+        display: none; 
+    }
+    
+    header.active {
+        flex-direction: column;
+    }
+
+    header.active nav {
+        display: block;
+        width: 100%;
+    }
+
+    header.active .nav_links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    header.active #headerIcons {
+        display: block;
+    }
+
     .heroleft{
+        height: 500px;
         margin-left: 60px;
     }
     .heroleft h1{
@@ -602,10 +674,6 @@ footer{
       justify-content: center;
       padding-left: 20px;
     }
-
-    .heroright img{
-        padding-top: 30%;
-    }
     
     .banners {
         flex-direction: column;
@@ -616,16 +684,18 @@ footer{
         width: 90%;
     }
 
-    .btn, .btnoutlined {
-        padding: 15px 40px;
-        font-size: 18px;
-    }
-
     .buttons {
         gap: 20px;
         flex-direction: column;
         align-items: center;
     }
+
+    .buttons a{
+        width: 130px;
+        font-size: 22px;
+        padding: 14px 24px;
+    }
+
     .product-grid {
         width: 100%;
     }

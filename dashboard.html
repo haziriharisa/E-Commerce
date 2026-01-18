@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span>Solora</span>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-dolly"></i>
+                <span>Products</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Customers</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="logout-section">
+            <a href="#" class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search orders, customers...">
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button class="icon-btn">
+                    <i class="far fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+                <div class="profile-pill">
+                    <img src="" alt="Profile">
+                    <span>Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+            <div class="welcome-section">
+                <h1>Overview</h1>
+                <p style="color: #6b7280">Welcome back! Here's your business performance today.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Total Revenue</h3>
+                        <p>$12,845.50</p>
+                    </div>
+                    <div class="stat-icon icon-green"><i class="fas fa-dollar-sign"></i></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>New Orders</h3>
+                        <p>156</p>
+                    </div>
+                    <div class="stat-icon icon-orange"><i class="fas fa-shopping-basket"></i></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Total Customers</h3>
+                        <p>2,420</p>
+                    </div>
+                    <div class="stat-icon icon-blue"><i class="fas fa-users"></i></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Active Menu</h3>
+                        <p>42 items</p>
+                    </div>
+                    <div class="stat-icon icon-purple"><i class="fas fa-clipboard-list"></i></div>
+                </div>
+            </div>
+
+            <div class="data-container">
+                <div class="container-header">
+                    <h2 style="font-size: 18px;">Recent Orders</h2>
+                    <button style="background: blueviolet; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600;">View All</button>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Item</th>
+                                <th>Date</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-7732</td>
+                                <td>John Doe</td>
+                                <td>Cheese Bacon Burger</td>
+                                <td>18 Jan 2026</td>
+                                <td>$15.50</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7731</td>
+                                <td>Sarah Smith</td>
+                                <td>Veggie Combo Deal</td>
+                                <td>18 Jan 2026</td>
+                                <td>$22.00</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7730</td>
+                                <td>Mike Ross</td>
+                                <td>Spicy Zinger Fries</td>
+                                <td>17 Jan 2026</td>
+                                <td>$12.20</td>
+                                <td><span class="status cancelled">Cancelled</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-7729</td>
+                                <td>Rachel Zane</td>
+                                <td>Double Decker Meal</td>
+                                <td>17 Jan 2026</td>
+                                <td>$18.90</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024 && 
+                !sidebar.contains(e.target) && 
+                !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

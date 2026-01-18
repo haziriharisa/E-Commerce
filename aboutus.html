@@ -8,9 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-     <header>
-        <a href=""><img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo"></a>
-        <nav>
+      <header id="header">
+        <div style="display: flex; justify-content: center; gap: 10px; align-items: center; margin-right: 20px;">
+            <button class="menu-toggle" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+             <a href="index.html">
+                <img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
+            </a>
+        </div>
+        <nav id="navbar">
             <ul class="nav_links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -18,7 +25,8 @@
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="icons">
+
+        <div class="icons" id="headerIcons">
             <a href="cart.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.html"><i id="account" class="fa-solid fa-user"></i></a>
         </div>
@@ -34,7 +42,7 @@
             <h2>Our Core Pillars</h2>
             <div class="values-grid">
                 <div class="pillar-card">
-                    <span class="icon">✨</span>
+                    <span class="icon"><i class="fa-solid fa-medal"></i></span>
                     <h3>Curated Excellence</h3>
                     <p>Every product we offer is hand-vetted for authenticity, quality, and condition, ensuring your device meets the high standards you expect from the Apple ecosystem.</p>
                 </div>
@@ -44,7 +52,7 @@
                     <p>We champion devices that extend the lifecycle of technology, supporting Apple's commitment to the environment and offering you a smarter, greener choice.</p>
                 </div>
                 <div class="pillar-card">
-                    <span class="icon"><i class="fa-regular fa-handshake"></i></span>
+                    <span class="icon"><i class="fa-solid fa-handshake"></i></span>
                     <h3>Dedicated Support</h3>
                     <p>Our in-house, certified technicians offer world-class support. We are here not just for the sale, but for the entire life of your device.</p>
                 </div>
@@ -55,6 +63,7 @@
             <div class="team-container">
                 <div class="team-member-card">                 
                     <div class="member-info">
+                        <img src="images/Sample_User_Icon.png">
                         <h3>John Smith</h3>
                         <p class="role">Chief Executive Officer (CEO)</p>
                         <p class="description">Leading the company's vision and strategy since 2018.</p>
@@ -62,6 +71,7 @@
                 </div>
                 <div class="team-member-card"> 
                     <div class="member-info">
+                        <img src="images/Sample_User_Icon.png">
                         <h3>Jane Doe</h3>
                         <p class="role">Head of Product Development</p>
                         <p class="description">Dedicated to building innovative and user-centric products.</p>
@@ -112,5 +122,6 @@
             </div>
         </div>
     </footer>
+        <script src="nav.js"></script>
 </body>
 </html>

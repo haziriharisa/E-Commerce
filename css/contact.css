@@ -15,11 +15,20 @@ header{
 .logo {
     cursor: pointer;
     width: 140px;
-    
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
 }
 
 .nav_links{
     list-style: none;
+    margin-right: 30px;
 }
 
 .nav_links li{
@@ -49,20 +58,6 @@ header{
     color: rgb(117, 18, 255,1);
     margin-top: 10px;
     font-size: 25px;
-}
-button{
-    color: white;
-    padding: 10px 30px;
-    font-size: 15px;
-    background-color: rgb(117, 18, 255,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-button:hover{
-    background-color: rgb(98, 0, 236);
 }
 
 .form-container{
@@ -249,11 +244,46 @@ footer{
 }     
    
 
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 942px) {
     
     header {
         flex-direction: column;
         padding: 20px 5%;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    #navbar{
+        height: 180px;
+    }
+
+    nav{
+        display: none; 
+    }
+
+    #headerIcons {
+        display: none; 
+    }
+    
+    header.active {
+        flex-direction: column;
+    }
+
+    header.active nav {
+        display: block;
+        width: 100%;
+    }
+
+    header.active .nav_links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    header.active #headerIcons {
+        display: block;
+        padding-left: 20px;
     }
 
     .nav_links {
@@ -265,16 +295,12 @@ footer{
         display: block; 
         padding: 10px 0;
     }
-      #account{
-        margin-top: 18px;
-    }
-
+    
     .icons{
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      padding-left: 20px;
     }
 
     .form-container {

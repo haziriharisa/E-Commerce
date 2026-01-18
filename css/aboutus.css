@@ -18,8 +18,18 @@ header{
     
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
 .nav_links{
     list-style: none;
+    margin-right: 30px;
 }
 
 .nav_links li{
@@ -157,10 +167,9 @@ header{
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px; 
     text-align: left;
     display: block;
-    width: 400px;
+    width: 600px;
     height: 200px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -169,6 +178,16 @@ header{
 
 .team-member-card:hover {
     transform: translateY(-5px); 
+}
+
+.member-info img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.member-info{
+    margin-top: 20px;
 }
 
 .member-info h3 {
@@ -288,7 +307,7 @@ footer{
         margin-right: 5%;
     }
 }
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 942px) {
     
     header {
         flex-direction: column;
@@ -306,6 +325,35 @@ footer{
         padding: 10px 0;
     }
 
+    .menu-toggle {
+        display: block; 
+    }
+
+    nav{
+        display: none; 
+    }
+
+    #headerIcons {
+        display: none; 
+    }
+    
+    header.active {
+        flex-direction: column;
+    }
+
+    header.active nav {
+        display: block;
+        width: 100%;
+    }
+
+    header.active .nav_links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    header.active #headerIcons {
+        display: block;
+    }
 
     .icons{
       display: flex;
@@ -313,6 +361,9 @@ footer{
       align-items: center;
       justify-content: center;
       padding-left: 20px;
+    }
+    .hero-section{
+        height: 500px;
     }
     .hero-section h1 {
         font-size: 35px; 
@@ -359,6 +410,9 @@ footer{
 @media screen and (max-width: 480px) {
     .hero-section h1 {
         font-size: 28px;
+    }
+    .hero-section{
+        height: 400px;
     }
     
     .story-section h2, .values h2, .team-section h2 {
