@@ -1,3 +1,19 @@
+<?php
+require_once 'Database.php';
+require_once 'PageContent.php';
+
+$database = new Database();
+$db = $database->getConnection();
+
+$page = new PageContent($db);
+$content = $page->getPageData('aboutus');
+$team = $page->getTeamMembers();
+
+function e($key, $content, $default = "") {
+    echo htmlspecialchars($content[$key] ?? $default);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,52 +47,53 @@
             <a href="login.html"><i id="account" class="fa-solid fa-user"></i></a>
         </div>
     </header>
-        <div class="hero-section">
-            <h1>Solora: Your Premier Home for All Things Apple.</h1>
+       <div class="hero-section">
+        <h1><?php e('hero_title', $content, 'About Our Company'); ?></h1>
         </div>
-        <div class="story-section">
+       <div class="story-section">
             <h2>Our Story & Mission</h2>
-            <p>We started Solora with a single vision, to bridge the gap between powerful Apple technology and the people who use it every day. That shopping for Apple products should be an inspiring and effortless experience. We recognized the need for a dedicated, knowledgeable partner that understands the unique features and capabilities of every iPhone, MacBook, iPad, and AirPods.</p>
+            <p><?php e('story_text', $content, 'Default story text goes here...'); ?></p>
         </div>
+
         <div class="values">
             <h2>Our Core Pillars</h2>
             <div class="values-grid">
                 <div class="pillar-card">
                     <span class="icon"><i class="fa-solid fa-medal"></i></span>
-                    <h3>Curated Excellence</h3>
-                    <p>Every product we offer is hand-vetted for authenticity, quality, and condition, ensuring your device meets the high standards you expect from the Apple ecosystem.</p>
+                    <h3><?php e('pillar_1_title', $content, 'Curated Excellence'); ?></h3>
+                    <p><?php e('pillar_1_desc', $content, 'Quality assurance description.'); ?></p>
                 </div>
+
                 <div class="pillar-card">
                     <span class="icon"><i class="fa-solid fa-mobile"></i></span>
-                    <h3>Sustainable Tech</h3>
-                    <p>We champion devices that extend the lifecycle of technology, supporting Apple's commitment to the environment and offering you a smarter, greener choice.</p>
+                    <h3><?php e('pillar_2_title', $content, 'Sustainable Tech'); ?></h3>
+                    <p><?php e('pillar_2_desc', $content, 'Sustainability description.'); ?></p>
                 </div>
+
                 <div class="pillar-card">
                     <span class="icon"><i class="fa-solid fa-handshake"></i></span>
-                    <h3>Dedicated Support</h3>
-                    <p>Our in-house, certified technicians offer world-class support. We are here not just for the sale, but for the entire life of your device.</p>
+                    <h3><?php e('pillar_3_title', $content, 'Dedicated Support'); ?></h3>
+                    <p><?php e('pillar_3_desc', $content, 'Support description.'); ?></p>
                 </div>
             </div>         
         </div>
-        <div class="team-section">
-            <h2>Meet Our Team</h2>
+      <div class="team-section">
+        <h2>Meet Our Team</h2>
             <div class="team-container">
-                <div class="team-member-card">                 
-                    <div class="member-info">
-                        <img src="images/Sample_User_Icon.png">
-                        <h3>John Smith</h3>
-                        <p class="role">Chief Executive Officer (CEO)</p>
-                        <p class="description">Leading the company's vision and strategy since 2018.</p>
-                    </div>
-                </div>
-                <div class="team-member-card"> 
-                    <div class="member-info">
-                        <img src="images/Sample_User_Icon.png">
-                        <h3>Jane Doe</h3>
-                        <p class="role">Head of Product Development</p>
-                        <p class="description">Dedicated to building innovative and user-centric products.</p>
-                    </div>
-                </div>
+                <?php if (!empty($team)): ?>
+                    <?php foreach ($team as $member): ?>
+                        <div class="team-member-card"> 
+                            <div class="member-info">
+                                <img src="<?php echo htmlspecialchars($member['image_path']); ?>" alt="<?php echo htmlspecialchars($member['name']); ?>">
+                                <h3><?php echo htmlspecialchars($member['name']); ?></h3>
+                                <p class="role"><?php echo htmlspecialchars($member['role']); ?></p>
+                                <p class="description"><?php echo htmlspecialchars($member['description']); ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Our team is growing! Check back soon.</p>
+                <?php endif; ?>
             </div>
         </div>
      <footer>
