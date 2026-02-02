@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/forgot.css">
 
-    <title>Document</title>
+    <title>Solora</title>
 </head>
 <body>
     <div class="login-container">

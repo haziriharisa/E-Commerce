@@ -38,14 +38,19 @@ $tax_rate = 0.18;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Your Cart</title>
+    <title>Solora</title>
 </head>
 <body>
-    <header>
-        <a href="index.php">
+      <header id="header">
+        <div style="display: flex; justify-content: center; gap: 10px; align-items: center; margin-right: 20px;">
+            <button class="menu-toggle" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+             <a href="index.php">
                 <img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
-        </a>
-        <nav>
+            </a>
+        </div>
+        <nav id="navbar">
             <ul class="nav_links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
@@ -53,7 +58,8 @@ $tax_rate = 0.18;
                 <li><a href="contactus.php">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="icons">
+
+        <div class="icons" id="headerIcons">
             <a href="cart.php"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
             <a href="login.php"><i id="account" class="fa-solid fa-user"></i></a>
         </div>
@@ -133,3 +139,50 @@ $tax_rate = 0.18;
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4 style="padding-bottom: 5px;">company</h4>
+                    <ul>
+                        <li><a href="">about us</a></li>
+                        <li><a href="">our services</a></li>
+                        <li><a href="">privacy policy</a></li>
+                        <li><a href="">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="padding-bottom: 5px;">get help</h4>
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">shipping</a></li>
+                        <li><a href="">returns</a></li>
+                        <li><a href="">order status</a></li>
+                        <li><a href="">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="padding-bottom: 5px;">online shop</h4>
+                    <ul>
+                        <li><a href="">iphones</a></li>
+                        <li><a href="">ipads</a></li>
+                        <li><a href="">airpods</a></li>
+                        <li><a href="">macbooks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="padding-bottom: 5px;">follow us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="nav.js"></script>
+
+</body>
+</html>
