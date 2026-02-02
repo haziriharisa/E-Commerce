@@ -1,3 +1,24 @@
+<?php
+
+require_once 'Database.php';
+
+session_start();
+
+if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
+    header("Location: login.php");
+    exit;
+}
+
+$user_id = $_SESSION['user_id'];
+$query = "SELECT first_name FROM users WHERE id = :id";
+$database = new Database(); 
+$conn = $database->getConnection(); 
+$stmt = $conn->prepare($query);
+$stmt->execute(['id' => $user_id]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$adminName = $user['first_name'] ?? 'Admin';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

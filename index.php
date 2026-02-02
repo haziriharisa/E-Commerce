@@ -1,3 +1,15 @@
+<?php
+    include_once 'Database.php';
+    include_once 'Product.php';
+
+    $database = new Database();
+    $db = $database->getConnection();
+    $product = new Product($db);
+
+    $sort = isset($_GET['sort']) ? $_GET['sort'] : 'default';
+    $stmt = $product->readAll($sort);
+    $num = $stmt->rowCount();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,69 +80,17 @@
     <h2 id="latest">Check out what's new</h2>
     <h2 id="latest-desc">Latest technology we have to offer</h2>
 
-    <div class="product-grid">         
+    <div class="product-grid"> 
+        <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="product-card">
-                <h3 class="product-title">IPhone 15</h3>
-                <img class="product-image" src="images/iphone15.jpg">
-                <p class="product-price">$359.79</p>
-                <p class="product-category">IPhones</p>
+                <h3 class="product-title"><?php echo htmlspecialchars($row['title']); ?></h3>
+                <img class="product-image" src="<?php echo $row['image_url']; ?>" alt="product">
+                <p class="product-price">$<?php echo number_format($row['price'], 2); ?></p>
+                <p class="product-category"><?php echo htmlspecialchars($row['category']); ?></p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-            
-            <div class="product-card">
-                <h3 class="product-title">IPhone 15 Pro</h3>
-                <img class="product-image" src="images/iphone15pro.jpg">
-                <p class="product-price">$429.89</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product-card">         
-                <h3 class="product-title">IPhone 15 Pro Max</h3>
-                <img class="product-image" src="images/iphone15promax.jpg">
-                <p class="product-price">$489.99</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>    
-            <div class="product-card">
-                <h3 class="product-title">IPhone 15</h3>
-                <img class="product-image" src="images/iphone15.jpg">
-                <p class="product-price">$359.79</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <h3 class="product-title">IPhone 15 Pro</h3>
-                <img class="product-image" src="images/iphone15pro.jpg">
-                <p class="product-price">$429.89</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <div class="product-card">         
-                <h3 class="product-title">IPhone 15 Pro Max</h3>
-                <img class="product-image" src="images/iphone15promax.jpg">
-                <p class="product-price">$489.99</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>          
-            <div class="product-card">
-                <h3 class="product-title">IPhone 15</h3>
-                <img class="product-image" src="images/iphone15.jpg">
-                <p class="product-price">$359.79</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <h3 class="product-title">IPhone 15 Pro</h3>
-                <img class="product-image" src="images/iphone15pro.jpg">
-                <p class="product-price">$429.89</p>
-                <p class="product-category">IPhones</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>              
-        </div>
+        <?php endwhile; ?>
+    </div>
 
     <div class="subscribe">
         <h1 style="margin-bottom: 20px; color: white; font-size: 34px;">Join Our Newsletter & Get 15% Off</h1>
