@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     background-color: black;
 }
 
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     width: 480px;
-    height: auto;
+    height: 88vh;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 30px 20px;
@@ -35,17 +35,30 @@
     color: white;
     text-align: center;
     font-size: 40px;
-    margin-bottom: 20px;
     font-weight: bold;
 }
 
-.detail{
-    color: white;
-    text-align: center;
-    font-size: 21px;
+.form{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
+.user{
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    border-bottom: 2px solid white;
+    background: none;
+}
+.user option{
+    color: black;
+}
 .login-box input{
     padding: 15px;
     margin-bottom: 20px;
@@ -78,7 +91,7 @@
     gap: 20px;
 }
 .name input{
-    width: 200px;
+    width: 100%;
 }
 
 .role{
@@ -87,7 +100,12 @@
     gap: 20px;
 }
 .role input{
-    width: 200px;
+    width: 100%;
+}
+
+.sign{
+    display: flex;
+    flex-direction: column;
 }
 
 .login_btn{
