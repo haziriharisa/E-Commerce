@@ -96,6 +96,53 @@ function e($key, $content, $default = "") {
                 <?php endif; ?>
             </div>
         </div>
+        <section class="testimonial-slider-container">
+        <div class="testimonial-header">
+            <h2>What Our Customers Say</h2>
+        </div>
+
+    <div class="slider-viewport">
+        <div class="slider-track" id="sliderTrack">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Solora is the only place I trust for my Apple upgrades. The iPhone 15 Pro was perfect.</p>
+                <div class="testimonial-user">
+                    <img src="images/Sample_User_Icon.png" alt="User">
+                    <div class="user-info">
+                        <strong>Alex Rivera</strong>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">Fast shipping and the best prices I've found online. The trade-in process was seamless!</p>
+                <div class="testimonial-user">
+                    <img src="images/Sample_User_Icon.png" alt="User">    
+                <div class="user-info">
+                        <strong>Sarah Jenkins</strong>
+                        <span>Tech Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">I was skeptical about buying online, but Solora's transparency gave me peace of mind.</p>
+                <div class="testimonial-user">
+                    <img src="images/Sample_User_Icon.png" alt="User">
+                <div class="user-info">
+                        <strong>Michael Chen</strong>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-controls">
+        <button class="control-btn" onclick="moveSlider(-1)">❮</button>
+        <button class="control-btn" onclick="moveSlider(1)">❯</button>
+    </div>
+</section>
      <footer>
         <div class="container">
             <div class="row">
