@@ -403,7 +403,7 @@ footer{
         padding: 20px 40px;
     }
 
-    .values, .team-section{
+    .values, .team-section, .testimonial-slider-container{
         height: auto;
         padding: 20px 40px;
         margin-left: 5%;
@@ -434,6 +434,10 @@ footer{
 
     nav{
         display: none; 
+    }
+
+    .testimonial-header h2{
+        font-size: 30px;
     }
 
     #headerIcons {
