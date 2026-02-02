@@ -36,7 +36,7 @@ $adminName = $user['first_name'] ?? 'Admin';
         </div>
         
         <nav class="nav-links">
-            <a href="#" class="nav-item active">
+            <a href="dashboard.php" class="nav-item active">
                 <i class="fas fa-home"></i>
                 <span>Dashboard</span>
             </a>

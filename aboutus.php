@@ -36,9 +36,9 @@ function e($key, $content, $default = "") {
         <nav id="navbar">
             <ul class="nav_links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
             </ul>
         </nav>
 

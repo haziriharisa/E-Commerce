@@ -56,8 +56,8 @@
             <h1><?php e('home_title', $content, 'Solora'); ?></h1>
             <p> <?php e('home_desc', $content, 'About Our Company'); ?> </p>
             <div class="buttons">
-                <a href="shop.html" class="btn">Shop Now</a>
-                <a href="aboutus.html" class="btnoutlined">Read More</a>
+                <a href="shop.php" class="btn">Shop Now</a>
+                <a href="aboutus.php" class="btnoutlined">Read More</a>
             </div>
         </div>
         <div class="heroright">
