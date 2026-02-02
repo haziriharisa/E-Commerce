@@ -1,3 +1,32 @@
+<?php
+
+require_once 'Database.php';
+require_once 'Contact.php';
+
+$feedback = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $database = new Database();
+    $db = $database->getConnection();
+    $contact = new Contact($db);
+
+    $fName   = $_POST['firstName'];
+    $lName   = $_POST['lastName'];
+    $email   = $_POST['email'];
+    $mobile  = $_POST['mobile'];
+    $msg     = $_POST['message'];
+
+    if ($contact->saveMessage($fName, $lName, $email, $mobile, $msg)) {
+        $feedback = "success";
+    } else {
+        $feedback = "error";
+    }
+
+    header("Location: contactus.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
