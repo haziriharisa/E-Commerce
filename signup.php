@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/signup.css">
 
-    <title>Document</title>
+    <title>Solora</title>
 </head>
 <body>
    <div class="login-container">

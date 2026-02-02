@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/customer.css">
-    <title>Solora Dashboard</title>
+    <title>Solora</title>
 </head>
 <body>
     <aside class="sidebar" id="sidebar">

@@ -21,7 +21,7 @@ function e($key, $content, $default = "") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Solora</title>
 </head>
 <body>
       <header id="header">
@@ -29,13 +29,13 @@ function e($key, $content, $default = "") {
             <button class="menu-toggle" id="menuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-             <a href="index.html">
+             <a href="index.php">
                 <img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
             </a>
         </div>
         <nav id="navbar">
             <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
@@ -43,8 +43,8 @@ function e($key, $content, $default = "") {
         </nav>
 
         <div class="icons" id="headerIcons">
-            <a href="cart.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
-            <a href="login.html"><i id="account" class="fa-solid fa-user"></i></a>
+            <a href="cart.php"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.php"><i id="account" class="fa-solid fa-user"></i></a>
         </div>
     </header>
        <div class="hero-section">

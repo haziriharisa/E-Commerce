@@ -1,15 +1,23 @@
 <?php
     include_once 'Database.php';
     include_once 'Product.php';
+    include_once 'PageContent.php';
 
     $database = new Database();
     $db = $database->getConnection();
     $product = new Product($db);
+    $page = new PageContent($db);
+    $content = $page->getPageData('home');
 
     $sort = isset($_GET['sort']) ? $_GET['sort'] : 'default';
     $stmt = $product->readAll($sort);
     $num = $stmt->rowCount();
+
+    function e($key, $content, $default = "") {
+    echo htmlspecialchars($content[$key] ?? $default);
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,30 +33,28 @@
             <button class="menu-toggle" id="menuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-             <a href="index.html">
+             <a href="index.php">
                 <img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
             </a>
         </div>
         <nav id="navbar">
             <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
             </ul>
         </nav>
 
         <div class="icons" id="headerIcons">
-            <a href="cart.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
-            <a href="login.html"><i id="account" class="fa-solid fa-user"></i></a>
+            <a href="cart.php"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
+            <a href="login.php"><i id="account" class="fa-solid fa-user"></i></a>
         </div>
     </header>
     <div class="hero">
         <div class="heroleft">
-            <h1>Think tech. Think <b>SOLORA.</b></h1>
-            <p>
-                SOLORA brings you modern, reliable electronics designed to fit your everyday life. Simple. Smart. Essential.
-            </p>
+            <h1><?php e('home_title', $content, 'Solora'); ?></h1>
+            <p> <?php e('home_desc', $content, 'About Our Company'); ?> </p>
             <div class="buttons">
                 <a href="shop.html" class="btn">Shop Now</a>
                 <a href="aboutus.html" class="btnoutlined">Read More</a>
@@ -77,9 +83,8 @@
         </div>
     </div>
 
-    <h2 id="latest">Check out what's new</h2>
-    <h2 id="latest-desc">Latest technology we have to offer</h2>
-
+    <h2 id="latest"><?php e('latest_title', $content, 'Our Products'); ?></h2>
+    <h2 id="latest-desc"><?php e('latest_desc', $content, 'Trenfing'); ?></h2>
     <div class="product-grid"> 
         <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="product-card">
@@ -93,8 +98,8 @@
     </div>
 
     <div class="subscribe">
-        <h1 style="margin-bottom: 20px; color: white; font-size: 34px;">Join Our Newsletter & Get 15% Off</h1>
-        <h3 style="color: white; font-size: 22px;">Sign up now to receive exclusive deals, early access to new products, and special insider discounts</h3>
+        <h1 style="margin-bottom: 20px; color: white; font-size: 34px;"><?php e('news_title', $content, '15% Off'); ?></h1>
+        <h3 style="color: white; font-size: 22px;"><?php e('news_desc', $content, 'Subscribe for the latest news.'); ?></h3>
         <form class="sub-form">
             <input type="email" placeholder="Enter your email address" class="email-section">
             <button type="submit" class="sub-btn">Subscribe</button>
@@ -104,8 +109,8 @@
 
     <div class="sale-section">
         <div class="sale-title">
-            <h1>Enhance Your Music Experience</h1>
-            <p>Check out our new AirPod Max Collection</p>
+            <h1><?php e('music_title', $content, 'New Headphones'); ?></h1>
+            <p><?php e('music_desc', $content, 'Listen to your music with quality headphones'); ?></p>
             <button>Shop Now</button>
         </div>
         <div class="sale-image">
@@ -138,10 +143,10 @@
                 <div class="footer-col">
                     <h4 style="padding-bottom: 5px;">online shop</h4>
                     <ul>
-                        <li><a href="">iphones</a></li>
-                        <li><a href="">ipads</a></li>
-                        <li><a href="">airpods</a></li>
-                        <li><a href="">macbooks</a></li>
+                        <li><a href="">iPhones</a></li>
+                        <li><a href="">iPads</a></li>
+                        <li><a href="">Airpods</a></li>
+                        <li><a href="">Macbooks</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

@@ -34,7 +34,7 @@ $num = $stmt->rowCount();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Solora</title>
 </head>
 <body>
     <header id="header">
@@ -42,13 +42,13 @@ $num = $stmt->rowCount();
             <button class="menu-toggle" id="menuBtn">
                 <i class="fas fa-bars"></i>
             </button>
-             <a href="index.html">
+             <a href="index.php">
                 <img class="logo" src="images/Screenshot_2025-11-14_100306-removebg-preview.png" alt="logo" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'">
             </a>
         </div>
         <nav id="navbar">
             <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="aboutus.php">About Us</a></li>
                 <li><a href="contactus.php">Contact Us</a></li>
