@@ -327,3 +327,200 @@ footer{
     font-weight: 700;
     color:  #111827;
 }
+.container-footer{
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: nowrap ;
+}
+
+ul{
+    list-style-type: none;
+}
+
+footer{
+    background-color: #24262b;
+    padding: 50px 70px;
+}
+
+.footer-col{
+    width: 30%;
+    background-color: #24262b;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+    display: inline;
+    border-bottom: 2px solid rgb(117, 18, 255,1);
+}
+
+
+.footer-col ul li{
+    margin-bottom: 10px;
+}
+
+.footer-col ul{
+    margin-top: 20px;
+    padding: 0;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: inline;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links{
+    margin-top: 20px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0,2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}  
+
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 20px 5%;      
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+    #headerIcons {
+        display: none; 
+    }
+    
+    header.active {
+        flex-direction: column;
+    }
+
+    header.active nav {
+        display: block;
+        width: 100%;
+    }
+
+     nav{
+        display: none; 
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .nav_links li {
+        align-items: center;
+        padding: 10px;
+    }
+    header.active .nav_links {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    header.active #headerIcons {
+        display: block;
+    }
+
+    #account{
+        margin-top: 18px;
+    }
+
+    .icons{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-left: 20px;
+    }
+    
+    .cart-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .cart-summary {
+        position: static; 
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .cart-item {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+    }
+
+    .item-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .item-details {
+        padding: 0;
+    }
+
+    .quantity-controls {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .item-price {
+        font-size: 20px;
+        order: 4;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+    }
+      .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+}
