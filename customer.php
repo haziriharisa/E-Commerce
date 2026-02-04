@@ -35,7 +35,7 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span>Orders</span>
             </a>
-            <a href="#" class="nav-item">
+            <a href="Product_admin.php" class="nav-item">
                 <i class="fa-solid fa-dolly"></i>
                 <span>Products</span>
             </a>

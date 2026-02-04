@@ -187,5 +187,6 @@ function e($key, $content, $default = "") {
         </div>
     </footer>
         <script src="nav.js"></script>
+        <script src="review.js"></script>
 </body>
 </html>
